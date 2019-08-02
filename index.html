@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="asm 主要机场订阅管理的格式转换器是转换成主要终端使用的格式，可以很容易部署 到Heroku。">
+    <title>asm | Airport subscription management | 机场订阅管理</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+</head>
+
+<body>
+
+    <!-- 你的HTML代码 -->
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 2em;">
+        <legend>asm | 机场订阅管理</legend>
+    </fieldset>
+    <span class="layui-breadcrumb">
+        <a href="/">首页</a>
+        <a href="/demo/">代理列表</a>
+        <!--<a><cite>导航元素</cite></a>-->
+    </span>
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space5">
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md4">
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                    <legend>新增订阅</legend>
+                </fieldset>
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">机场名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" required lay-verify="required" placeholder="请输入机场名称" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">订阅地址</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="url" required lay-verify="required" placeholder="请输入订阅地址" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">机场类型</label>
+                        <div class="layui-input-block">
+                            <select name="url_type" lay-verify="required">
+                            <option value="ssr">ssr</option>
+                            <option value="vmess">v2ray</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md8">
+                <table id="demo" lay-filter="test"></table>
+            </div>
+        </div>
+    </div>
+    <!-- HTML 结束-->
+
+    <script src="/layui/layui.js"></script>
+    <script src="/static/main.js"></script>
+</body>
+
+</html>

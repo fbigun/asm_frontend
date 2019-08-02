@@ -17,7 +17,7 @@ layui.use(['element', 'layer', 'form', 'table'], function () {
     table.render({
         elem: '#demo',
         height: 500,
-        url: '', //数据接口,需要自己实现相关后端
+        url: '/data.json', //数据接口
         page: true, //开启分页
         cols: [
             [ //表头
